@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prospect Ops</title>
+  <meta name="theme-color" content="#111111" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">PO</div>
+      <div>
+        <div class="brand-name">Prospect Ops</div>
+        <div class="brand-sub">Stock • Maintenance • Retainers</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <button class="tab" data-view="dashboard">Dashboard</button>
+      <button class="tab" data-view="clients">Clients</button>
+      <button class="tab" data-view="visits">Visits</button>
+      <button class="tab" data-view="maintenance">Maintenance</button>
+      <button class="tab" data-view="reports">Reports</button>
+      <button class="tab" data-view="retainers">Retainers</button>
+      <button class="tab tab-secondary" id="btnBackup">Backup</button>
+      <button class="tab tab-secondary" id="btnRestore">Restore</button>
+    </nav>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <dialog id="dlg" class="dlg">
+    <form method="dialog" class="dlg-inner">
+      <header class="dlg-head">
+        <div class="dlg-title" id="dlgTitle">Edit</div>
+        <button class="icon" value="cancel" aria-label="Close">✕</button>
+      </header>
+      <div id="dlgBody" class="dlg-body"></div>
+      <footer id="dlgFoot" class="dlg-foot"></footer>
+    </form>
+  </dialog>
+
+  <input id="restoreFile" type="file" accept="application/json" style="display:none" />
+
+  <script src="storage.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
